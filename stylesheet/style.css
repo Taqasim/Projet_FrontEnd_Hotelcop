@@ -1,0 +1,1235 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&family=Fraunces&family=Spline+Sans&family=Train+One&display=swap");
+
+/* Début css */
+
+/* Correction css par défaut */
+
+* {
+  box-sizing: border-box;
+  cursor: default;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 15px;
+  font-family: "Spline Sans", sans-serif;
+  background-color: rgb(15, 70, 5);
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: "Fraunces", serif;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+h1 {
+  background-color: rgb(255, 255, 255, 0.5);
+  padding: 2rem;
+  border-radius: 2rem;
+  font-size: 2.5rem;
+}
+
+.img_h1 {
+  position: relative;
+}
+
+.h1_absol {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(15, 70, 5);
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .h1_absol {
+    position: relative;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+.logo a:hover {
+  color: inherit;
+}
+
+button {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="date"] {
+  border-color: rgb(15, 70, 5);
+  border-radius: 0.2rem;
+  cursor: text;
+  width: 10rem;
+  height: 1.5rem;
+}
+
+input[type="email"] {
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  border-color: rgb(15, 70, 5);
+  cursor: pointer;
+}
+
+input[type="submit"],
+.btn {
+  background-color: rgb(15, 70, 5);
+  color: white;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+input[type="submit"]:hover,
+.btn:hover {
+  background-color: rgb(69, 7, 1);
+  color: white;
+}
+
+select {
+  background-color: white;
+  border: 1px solid rgb(15, 70, 5);
+  border-radius: 0.2rem;
+}
+
+/* Correction de la css de Bootstrap */
+
+.accordion-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Css perso */
+
+/*
+*
+* Header 
+*
+*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  height: 5rem;
+  z-index: 10;
+}
+
+/* Logo */
+
+.logo {
+  font-family: "El Messiri", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.logoxs {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .logo,
+  .logoxs {
+    font-size: 2rem;
+  }
+}
+
+.logo span,
+.logoxs {
+  font-family: "Train One", cursive;
+  text-transform: uppercase;
+  color: rgb(15, 70, 5);
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .logo {
+    display: none;
+  }
+
+  .logoxs {
+    display: block;
+  }
+}
+
+/* Nav */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a:hover {
+  color: rgb(69, 7, 1);
+}
+
+/* Gestion de la nav en xl */
+
+.navgd {
+  display: flex;
+  flex-direction: row;
+}
+
+.navgd a,
+.navgd button {
+  margin-left: 1rem;
+}
+
+.navgd a:first {
+  margin-left: 0;
+}
+
+.navgd a.dropdown-item {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.dropdown-item:hover {
+  color: white;
+  background-color: rgb(69, 7, 1);
+}
+
+/* Gestion de la nav sous xl */
+
+#bouton_navptt i {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+@media (max-width: 576px) {
+  #bouton_navptt i {
+    font-size: 1.5rem;
+  }
+}
+
+#corps_navptt {
+  display: none;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(69, 7, 1);
+  padding: 1rem;
+}
+
+.liens_navptt {
+  display: flex;
+  flex-direction: column;
+}
+
+.liens_navptt a,
+.liens_navptt button {
+  padding: 0.5rem;
+  color: white;
+}
+
+#corps_navptt a:hover {
+  background-color: white;
+  color: rgb(69, 7, 1);
+}
+
+#ferme_navptt i,
+.liens_navptt i {
+  color: white;
+  cursor: pointer;
+}
+
+/* Gestion des options */
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.options_up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+  min-width: 9rem;
+}
+
+@media (max-width: 576px) {
+  .options {
+    min-width: 3rem;
+  }
+}
+
+@media (max-width: 392px) {
+  .options_up {
+    min-width: 1rem;
+  }
+}
+
+/* Gestion du panier */
+
+.dropdown-item-text {
+  text-align: center;
+}
+
+.panier_btn {
+  font-size: 1.2rem;
+  color: rgb(15, 70, 5);
+}
+
+.boutons_panier {
+  display: flex;
+  justify-content: space-around;
+}
+
+.panier_down {
+  width: 30rem;
+}
+
+.boutons_panier .dropdown-item {
+  color: white;
+  background-color: rgb(15, 70, 5);
+  text-align: center;
+  border-radius: 0.2rem;
+  width: 10rem;
+}
+
+.boutons_panier .dropdown-item:hover {
+  background-color: rgb(69, 7, 1);
+}
+
+/* Gestion de la langue */
+
+.langue {
+  width: fit-content;
+}
+
+#lang {
+  height: 1.5rem;
+  border-radius: 0.2rem;
+  background-color: white;
+}
+
+/* Gestion de la barre de recherche */
+
+.searchgen,
+.searchgenptt {
+  display: flex;
+}
+
+.searchgenptt {
+  margin-bottom: 0.5rem;
+}
+
+.searchgen i,
+.searchgenptt i {
+  background-color: rgb(15, 70, 5);
+  color: white;
+  padding: 0.2rem;
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+
+.searchgenptt i {
+  background-color: white;
+  color: rgb(69, 7, 1);
+}
+
+#searchgenptt {
+  border-color: rgb(69, 7, 1);
+}
+@media (max-width: 768px) {
+  #searchgenptt {
+    width: 5rem;
+  }
+}
+
+#searchgen,
+#searchgenptt {
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+
+/* Lien réserver */
+
+.reserve {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  font-size: 1.2rem;
+  background-color: rgb(15, 70, 5);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .reserve {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
+
+.reserve:hover {
+  color: white;
+  background-color: rgb(69, 7, 1);
+}
+
+/*
+*
+* Footer 
+*
+*/
+
+footer {
+  height: 20rem;
+  background-color: rgb(15, 70, 5);
+  color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer_liens {
+    width: 100%;
+  }
+}
+
+.footer_liens a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Plan du site au-dessus de 992px */
+
+.plan_site {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.plan_site li {
+  margin-bottom: 0.2rem;
+}
+
+.plan_site p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Plan du site sous 992px */
+
+.accordion_planptt button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  color: rgb(15, 70, 5);
+  margin-bottom: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
+
+.legal {
+  display: flex;
+}
+
+/* Coordonnées dans le footer */
+
+.foot_coordonnees {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  border: 5px solid rgb(69, 7, 1);
+  border-radius: 0.5rem;
+}
+
+.foot_coordonnees h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 576px) {
+  .foot_coordonnees {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+    border: 3px solid rgb(69, 7, 1);
+  }
+  .foot_coordonnees h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+.foot_coordonnees p {
+  margin-top: 0.5rem;
+}
+
+/* La newsletter */
+
+.newsletter {
+  color: rgb(15, 70, 5);
+  background-color: white;
+  padding: 1rem;
+  height: fit-content;
+  border-radius: 0.5rem;
+}
+
+.newsletter p {
+  font-size: 1.2rem;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newsletter form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter input {
+  margin-bottom: 0.5rem;
+}
+
+/* Les réseaux */
+
+.reseaux {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  justify-content: space-around;
+  font-size: 2rem;
+}
+
+@media (max-width: 992px) {
+  .reseaux {
+    flex-direction: row;
+    height: fit-content;
+    width: 100%;
+  }
+}
+
+.reseaux i {
+  cursor: pointer;
+}
+
+/*
+*
+* Contenu 
+*
+*/
+
+.contenu {
+  background-color: white;
+  min-height: 42rem;
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.presentation_gen {
+  margin: 1rem 0;
+}
+
+/* 
+* Accueil
+*/
+
+/* Partie réservation de l'accueil */
+
+.resa_img {
+  position: relative;
+  width: 100%;
+}
+
+/* Réglage responsive du formulaire*/
+
+.absol_accueil1 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.resa_accueil {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255, 0.5);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.resa_accueil div {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 992px) {
+  .absol_accueil1 {
+    top: 15%;
+  }
+
+  .resa_accueil {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resa_accueil div {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .resa_accueil {
+    padding: 1rem;
+  }
+  .resa_accueil div {
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .absol_accueil1 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+/* Moto */
+
+.moto {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Carousel et chambres */
+
+.carousel_chambres_accueil {
+  position: relative;
+  width: 100%;
+}
+
+.absol_accueil2 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel_chambres_accueil h2 {
+  background-color: rgb(255, 255, 255, 0.5);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+@media (max-width: 768px) {
+  .carousel_chambres_accueil h2 {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .absol_accueil2 {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Coordonnées et photo de l'hôtel */
+
+.accueil_hotel {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.accueil_hotel .accueil_coordonnees {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.accueil_hotel img {
+  max-width: 730px;
+}
+
+/* 
+* Reserver
+*/
+
+.resa {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Garanties */
+
+.garanties {
+  text-align: center;
+  border: 2px solid rgb(69, 7, 1);
+  border-radius: 0.2rem;
+  padding: 1rem;
+}
+
+/* Formulaire */
+
+.resa_form {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(69, 7, 1);
+  border-radius: 0.2rem;
+  padding: 1rem;
+}
+
+/* Partie générale */
+
+#recap {
+  text-align: center;
+  margin: 1rem;
+}
+
+.resa_row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+@media (max-width: 768px) {
+  .resa_row div {
+    justify-content: center;
+  }
+}
+
+.resa_row div {
+  display: flex;
+  flex-direction: column;
+}
+
+.boutons_choix {
+  display: flex;
+  text-align: center;
+  color: white;
+}
+
+.switch_resa {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#affiche_chambre {
+  width: 80%;
+  background-color: rgb(15, 70, 5);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: width 2s ease;
+}
+
+#affiche_spa {
+  width: 20%;
+  background-color: rgb(69, 7, 1);
+  transition: width 2s ease;
+}
+
+#choix_chambre,
+#choix_spa {
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+#choix_chambre h5 {
+  border-bottom: 2px solid white;
+}
+
+.soin,
+.chambre {
+  margin-top: 1rem;
+}
+
+/* Choix des chambres */
+
+#choix_chambre {
+  background-color: rgb(15, 70, 5);
+  border-top-left-radius: 0;
+}
+
+.desc_img {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.desc_img img {
+  max-width: 350px;
+}
+
+.desc_chambre {
+  margin-right: 0.2rem;
+  text-align: center;
+}
+
+.resa_check {
+  background-color: white;
+  color: rgb(15, 70, 5);
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+/* Choix du spa */
+
+#choix_spa {
+  display: none;
+  background-color: rgb(69, 7, 1);
+  border-top-right-radius: 0;
+}
+
+.soin {
+  padding: 0.5rem;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+}
+
+.desc_soins {
+  text-align: center;
+}
+
+.form_spa {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+.form_spa > div {
+  margin: 0.5rem;
+}
+
+.resa_check_spa {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  color: rgb(69, 7, 1);
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+}
+
+.resa_check_spa:hover {
+  background-color: rgb(15, 70, 5);
+  color: white;
+}
+
+/* 
+* Chambres
+*/
+
+.desc_carousel {
+  margin-top: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pres_chambre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid rgb(69, 7, 1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.pres_chambre p {
+  margin-bottom: 0.5rem;
+}
+
+/* 
+* Spa
+*/
+
+.soins_spa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.soin_spa {
+  width: 45%;
+  border: 2px solid rgb(69, 7, 1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+@media (max-width: 992px) {
+  .soin_spa {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+.soin_spa p {
+  margin-bottom: 0.5rem;
+}
+
+.soin_spa div div {
+  display: flex;
+  justify-content: end;
+}
+
+/* 
+* Spa
+*/
+
+@media (max-width: 576px) {
+  h3.cartes {
+    font-size: 1.2rem;
+  }
+}
+
+.accordion_cartes {
+  text-align: center;
+  width: 100%;
+}
+
+.accordion_cartes button {
+  width: 100%;
+  font-size: 1.2rem;
+  background-color: rgb(15, 70, 5);
+  color: white;
+  padding: 0.5rem;
+}
+
+.accordion_cartes a {
+  color: rgb(15, 70, 5);
+}
+
+.accordion_cartes a:hover {
+  color: rgb(69, 7, 1);
+}
+
+.accordion_cartes p {
+  margin: 0.5rem 0;
+}
+
+.accordion_cartes .accordion-body {
+  border: 2px solid rgb(15, 70, 5);
+}
+
+/* 
+* Avis
+*/
+
+.avis_btn {
+  text-align: center;
+  color: white;
+}
+
+#avis_gen {
+  width: 42%;
+  background-color: rgb(15, 70, 5);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: width 2s ease;
+}
+
+#avis_chamb,
+#avis_spa,
+#avis_restau {
+  width: 19%;
+  background-color: rgb(69, 7, 1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: width 2s ease;
+}
+
+#ts_avis_chamb,
+#ts_avis_spa,
+#ts_avis_restau {
+  display: none;
+}
+
+.un_avis {
+  margin: 1rem;
+  background-color: #0b9b0b;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.avis_form {
+  padding: 1.5rem;
+  border: 2px solid rgb(69, 7, 1);
+  border-radius: 0.5rem;
+  margin: 1rem auto;
+}
+
+#duree_avis {
+  width: 3rem;
+}
+
+.tptif {
+  background-color: #0b9b0b;
+  color: white;
+}
+
+.ptif {
+  background-color: #68a10c;
+  color: white;
+}
+
+.passable {
+  background-color: #cfcc14;
+}
+
+.ntif {
+  background-color: #cf5f14;
+  color: white;
+}
+
+.tntif {
+  background-color: #cf2114;
+  color: white;
+}
+
+.erreur_avis {
+  color: red;
+  font-weight: bold;
+}
+
+/* 
+* Actualités
+*/
+
+.actus {
+  color: white;
+  border-top: 2px solid rgb(69, 7, 1);
+  padding-top: 2rem;
+}
+
+.actu {
+  padding: 1rem;
+  background-color: rgb(69, 7, 1);
+}
+
+.actu_sujet {
+  font-size: 1.1rem;
+}
+
+.actu_body {
+  margin: 0.75rem 0;
+}
+
+/* 
+* Qui
+*/
+
+.desc_img_qui {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 
+* Accès
+*/
+
+.coordon_acces {
+  text-align: center;
+}
+
+/* 
+* Contact,
+* Recrutement
+*/
+
+#form_contact,
+#form_recrutement {
+  border: 2px solid rgb(69, 7, 1);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#form_contact div div,
+#form_recrutement div div {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+*
+* Utilitaire
+*
+*/
+
+input.w_100 {
+  width: 100%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.blanc {
+  color: white;
+}
+
+.bkgc_1 {
+  background-color: rgb(15, 70, 5);
+}
+
+.bkgc_2 {
+  background-color: rgb(69, 7, 1);
+}
+
+.mtb_1 {
+  margin: 1rem 0;
+}
+
+.mtb_05 {
+  margin: 0.5rem 0;
+}
+
+.mr_02 {
+  margin-right: 0.2rem;
+}
+
+.ml_02 {
+  margin-left: 0.2rem;
+}
+
+.m_cent {
+  margin: 0 auto;
+}
+
+.p_05 {
+  padding: 0.5rem;
+}
+
+.txt_cent {
+  text-align: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.flex_betw {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex_aro {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex_cent {
+  display: flex;
+  justify-content: center;
+}
+
+.al_cent {
+  align-items: center;
+}
+
+.flex_col {
+  display: flex;
+  flex-direction: column;
+}
